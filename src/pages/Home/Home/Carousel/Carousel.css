@@ -1,0 +1,34 @@
+#booking-carousel .slick-dots {
+  bottom: 12%;
+  display: flex;
+  justify-content: center;
+}
+
+#booking-carousel li button:before {
+  font-size: 14px;
+  color: white;
+  opacity: 1;
+}
+
+#booking-carousel li.slick-active button:before {
+  color: #fb4226;
+  font-size: 14px;
+}
+
+#booking-carousel div {
+  height: 100%;
+}
+#booking-carousel .play-icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#booking-carousel .play-icon:hover {
+  opacity: 0.8;
+}
+#booking-carousel .carousel__item:hover .play-icon {
+  display: block;
+}

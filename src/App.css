@@ -1,0 +1,118 @@
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Tabs */
+
+/* div[id^="vertical-tabpanel"] > div {
+  padding: 0;
+} */
+
+div[id^="vertical-tabpanel"] > div {
+  padding: 0;
+}
+#homeCinemaComplex .MuiTabs-scroller,
+.accordionDetailId {
+  overflow-y: scroll !important;
+  overflow-x: scroll !important;
+}
+div[id^="vertical-tabpanel"] .MuiTabs-scroller {
+  height: 540px;
+  overflow: auto !important;
+}
+
+@media (max-width: 767.98px) {
+  #homeCinemaComplex .MuiTabs-indicator {
+    display: none;
+  }
+  div[id^="vertical-tabpanel"] .MuiTabs-scroller {
+    height: auto;
+  }
+  div[id^="vertical-tabpanel"] .MuiTabs-flexContainer {
+    overflow: auto;
+  }
+
+  #tabsParent .MuiTabs-indicator {
+    display: block;
+  }
+  div[id^="vertical-tabpanel"] .MuiTabs-flexContainer::-webkit-scrollbar,
+  #homeCinemaComplex .MuiTabs-scroller::-webkit-scrollbar,
+  #accordionDetailId::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.tab-header {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  border: none;
+  margin-bottom: 30px;
+}
+.tab-header__child {
+  font-size: 20px;
+  line-height: 24px;
+  height: 24px;
+  font-weight: 500;
+  padding: 0 25px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tab-header__child:hover {
+  font-size: 24px;
+}
+.tab-header__child.active {
+  color: #fa5238;
+  font-size: 24px;
+}
+
+/* HOME */
+.home-slick .slick-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 100px;
+  z-index: 2;
+  opacity: 0.5;
+  object-position: center;
+  object-fit: contain;
+}
+
+.home-slick .slick-next {
+  right: 12px;
+}
+.home-slick .slick-prev {
+  left: 12px;
+  z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+  .tab-header__child {
+    font-size: 18px;
+    padding: 0 8px;
+  }
+  .tab-header__child:hover {
+    font-size: 22px;
+  }
+  .tab-header__child.active {
+    color: #fa5238;
+    font-size: 22px;
+  }
+}
